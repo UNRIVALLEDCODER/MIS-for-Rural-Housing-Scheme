@@ -1,0 +1,623 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Roboto', sans-serif; /* Font for the entire website */
+  line-height: 1.6;
+  color: #2c3e50; /* Text color */
+  background-color: #ecf0f1; /* Background color */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.container h1 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #003366;
+}
+
+.container p {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.container .btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.8rem 1.5rem;
+  background-color: #f2a900;
+  color: #003366;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.container .btn:hover {
+  background-color: #d18c00;
+  transform: translateY(-3px);
+}
+
+/* Header styles */
+header {
+  background-color: #34495e; /* Header background color */
+  color: #ecf0f1; /* Header text color */
+  padding: 1rem 0;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: #f39c12; /* Bright orange for the logo to stand out */
+}
+
+/* Mobile Menu Toggle Button */
+.menu-toggle {
+  background-color: #f2a900;
+  color: #003366;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: none; /* Hidden on larger screens */
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Navigation styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links li {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}
+
+.nav-links a {
+  color: #ecf0f1; /* Navigation link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f39c12; /* Hover effect for navigation links */
+}
+
+/* Hero section styles */
+.hero {
+  background: linear-gradient(135deg, #34495e, #2c3e50); /* Gradient background */
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ecf0f1;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2.8rem; /* Hero title font size */
+  margin-bottom: 1rem;
+  color: #f39c12; /* Highlighted color for the title */
+}
+
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #ecf0f1;
+}
+
+/* Button styles */
+.btn {
+  background-color: #f39c12; /* Button background color */
+  color: #34495e; /* Button text color */
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e67e22; /* Hover effect for buttons */
+  transform: translateY(-3px);
+}
+
+.login-btn {
+  background-color: #f2a900;
+  color: #003366;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #d18c00;
+  transform: translateY(-3px);
+}
+
+.about, .scheme, .state-schemes, .gis, .stats, .news, .success, .resources {
+  padding: 4rem 0;
+  background-color: #ecf0f1; /* Light gray background for sections */
+}
+
+.about h2,
+.scheme h2,
+.state-schemes h2,
+.gis h2,
+.stats h2,
+.news h2,
+.success h2,
+.resources h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: #34495e; /* Deep blue-gray for headings */
+}
+
+.about p {
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.scheme-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.scheme-content .article {
+  background-color: #ffffff; /* White background for cards */
+  padding: 1.5rem;
+  border-left: 4px solid #f39c12; /* Bright orange border for emphasis */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.scheme-content .article h3 {
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.state-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.state-card {
+  background-color: #ffffff; /* White background for state cards */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.state-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #003366;
+}
+
+.state-card .card-content {
+  padding: 1.5rem;
+}
+
+.state-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #34495e; /* Deep blue-gray for card titles */
+}
+
+.state-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.state-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #f39c12; /* Bright orange for links */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.state-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gis p {
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.gis p::after {
+  content: " This system provides a centralized platform for monitoring, evaluating, and managing rural housing projects. It ensures transparency, accountability, and efficient resource allocation.";
+  display: block;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+.gis-map {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.gis-map img {
+  width: 45%;
+  margin: 0 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gis-map img:hover {
+  transform: scale(1.05);
+}
+
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.stat-item {
+  background-color: #e0e0e0;
+  padding: 2rem;
+  border-radius: 10px;
+  flex: 1 1 200px;
+}
+
+.stat-item h3 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.news-article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.news-article img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.news-article h3 {
+  color: #003366;
+  margin: 1rem;
+}
+
+.news-article p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.news-article a {
+  display: block;
+  margin: 0 1rem 1rem;
+  color: #f2a900;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.news-article:hover {
+  transform: translateY(-5px);
+}
+
+.success-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.success-story {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.success-story img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.success-story h3 {
+  color: #003366;
+  margin: 1rem 0 0.5rem;
+}
+
+.success-story p {
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.success-story:hover {
+  transform: translateY(-5px);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.resource-article {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.resource-article img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.resource-article h3 {
+  color: #003366;
+  margin: 1rem;
+}
+
+.resource-article p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.resource-article a {
+  display: block;
+  margin: 0 1rem 1rem;
+  color: #f2a900;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resource-article:hover {
+  transform: translateY(-5px);
+}
+
+/* Footer styles */
+footer {
+  background-color: #34495e; /* Footer background color */
+  color: #ecf0f1; /* Footer text color */
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.footer-container p {
+  margin-bottom: 0.5rem;
+}
+
+.social-links a {
+  color: #f39c12; /* Bright orange for social links */
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    margin-top: 1rem;
+    display: none;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .scheme-content, .stats-grid, .news-grid, .success-grid, .state-cards, .resources-grid {
+    max-width: 100%;
+  }
+  .news-article, .success-story, .resource-article, .state-card {
+    margin-bottom: 1rem;
+    width: 90%;
+  }
+  .gis-map img {
+    width: 90%;
+  }
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #003366, #f2a900);
+  background-size: cover;
+  background-position: center;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-card h2 {
+  margin-bottom: 0.5rem;
+  color: #003366;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.login-subtitle {
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.login-card label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-card input:focus {
+  border-color: #f2a900;
+  outline: none;
+  box-shadow: 0 0 5px rgba(242, 169, 0, 0.5);
+}
+
+.login-card .btn {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #003366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.login-card .btn:hover {
+  background-color: #f2a900;
+  transform: translateY(-3px);
+}
+
+.login-footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.login-footer a {
+  color: #f2a900;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}

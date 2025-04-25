@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to external CSS for styling -->
+</head>
+<body>
+  <div class="login-container"> <!-- Full-screen container for the login page -->
+    <div class="login-card"> <!-- Card-style container for the login form -->
+      <h2>Welcome Back</h2> <!-- Title for the login page -->
+      <p class="login-subtitle">Please login to access your dashboard</p> <!-- Subtitle for instructions -->
+      <form id="loginForm"> <!-- Login form -->
+        <label for="username">Email:</label> <!-- Label for email input -->
+        <input type="email" id="username" name="username" placeholder="Enter your email" required> <!-- Email input field -->
+        <label for="password">Password:</label> <!-- Label for password input -->
+        <input type="password" id="password" name="password" placeholder="Enter your password" required> <!-- Password input field -->
+        <button type="submit" class="btn">Login</button> <!-- Submit button -->
+      </form>
+      <p class="login-footer">Don't have an account? <a href="register.html">Register here</a></p> <!-- Link to registration page -->
+    </div>
+  </div>
+  <script src="login.js"></script> <!-- Link to external JavaScript for login functionality -->
+</body>
+</html>
